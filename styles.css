@@ -13,7 +13,7 @@ body {
     background-color: #f8f9fa;
 }
 
-/* استایل کانتینر اصلی */
+/* تنظیمات کانتینر */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -23,7 +23,7 @@ body {
 
 /* استایل لوگو */
 .logo img {
-    height: 60px;
+    height: 50px;
     width: auto;
     display: block;
 }
@@ -56,7 +56,7 @@ body {
     color: #ff5757;
 }
 
-/* استایل دکمه‌های اصلی */
+/* دکمه‌های اصلی */
 .cta-button {
     display: inline-block;
     padding: 0.8rem 2rem;
@@ -74,7 +74,7 @@ body {
     color: white;
 }
 
-/* استایل صفحه اصلی */
+/* هدر صفحه اصلی */
 .hero {
     background: linear-gradient(45deg, #ff5757, #ff8c42);
     color: white;
@@ -109,7 +109,7 @@ th {
     color: white;
 }
 
-/* استایل گالری تصاویر */
+/* گالری تصاویر */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -210,28 +210,55 @@ textarea {
     font-size: 1.2em;
 }
 
-/* طراحی واکنش‌گرا */
+/* 📌 طراحی واکنش‌گرا برای موبایل */
 @media (max-width: 768px) {
+    /* منو همبرگری */
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
     .nav-links {
-        margin-top: 1rem;
         flex-direction: column;
-        width: 100%;
+        gap: 1rem;
     }
 
-    .nav-links li {
-        margin-bottom: 0.5rem;
+    .nav-links a {
+        font-size: 1rem;
     }
 
     .hero-content h2 {
         font-size: 2rem;
     }
-    
+
+    /* تنظیم اندازه لوگو */
+    .logo img {
+        height: 40px;
+    }
+
+    /* تنظیمات جدول‌ها برای موبایل */
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    /* تنظیمات گالری برای موبایل */
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* 📌 تنظیمات اضافی برای تبلت */
+@media (max-width: 1024px) {
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.5rem;
     }
 }
